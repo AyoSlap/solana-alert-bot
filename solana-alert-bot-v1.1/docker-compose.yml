@@ -1,0 +1,8 @@
+services:
+  solana-alert-bot:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./state.json:/app/state.json
